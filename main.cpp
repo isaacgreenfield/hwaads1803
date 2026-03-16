@@ -42,8 +42,15 @@ List<T>* getNext(Vec<List<T>*>& v, size_t& pos){
 }
 
 template <class T>
+size_t getLong(Vec<List<T>*> v){
+  size_t ans = 0;
+  while(getNext()) ans++;
+  return ans;
+}
+
+template <class T>
 Vec<List<T>*> balanced_move(Vec<List<T>*> v, size_t k){
-  Vec<List<T>*> ans = Vec(new List<T>*[v.cap], v.s, v.cap);
+  Vec<List<T>*> ans = Vec(new List<T>*[ans/k + 1], v.s, v.cap);
   Vec<List<T>*> e = v;
   size_t pos = 0;
   try{
